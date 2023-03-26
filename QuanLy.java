@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 public class QuanLy {
-ArrayList<sach> s;
+ArrayList<sach> s = new ArrayList<>();;
 public QuanLy() {
-s = new ArrayList<>();
+
 }
 public void themsach(sach a) {
 Scanner sc = new Scanner(System.in);
@@ -93,7 +93,8 @@ public void suasachhoctap(String maSachht) {
 for (sach x : s) {
 if (x instanceof sachhoctap) {
 if (((sachhoctap) x).getMaSach().compareTo(maSachht) == 0) {
-x.nhap();
+    x = new sachhoctap();
+    x.nhap();
 }
 }
 }
@@ -102,7 +103,9 @@ public void xoasachhoctap(String maSachht) {
 for (sach x : s) {
 if (x instanceof sachhoctap) {
 if (((sachhoctap) x).getMaSach().compareTo(maSachht) == 0) {
-s.remove(x);
+   x = new sachhoctap();
+   s.remove(x);
+    
 }
 }
 }
@@ -111,6 +114,7 @@ public void suasachgiaitri(String maSachgt) {
 for (sach x : s) {
 if (x instanceof sachgiaitri) {
 if (((sachgiaitri) x).getMaSach().compareTo(maSachgt) == 0) {
+    x = new sachgiaitri();
     x.nhap();
 }
 }
@@ -120,7 +124,8 @@ public void xoasachgiaitri(String maSachgt) {
 for (sach x : s) {
 if (x instanceof sachgiaitri) {
 if (((sachgiaitri) x).getMaSach().compareTo(maSachgt) == 0) {
-s.remove(x);
+    x = new sachgiaitri();
+    s.remove(x);
 }
 }
 }
@@ -131,22 +136,18 @@ public void timkiem(){
     String a;
     a = sc.nextLine();
     for (sach x : s) {
-if(x instanceof sach){
-    if (((sachhoctap) x).getTensach().compareTo(a) == 0) {
+if (((sach) x).getTensach().compareTo(a) == 0){
+    if(x instanceof sachhoctap) {
     System.out.println("sách học tập");
     x.hien();
     }
-    else{
-    System.out.println("không tìm thấy ở sách học tập ");
-        }
-    if (((sachhoctap) x).getTensach().compareTo(a) == 0){
+    else if (x instanceof sachgiaitri){
     System.out.println("sách giải trí");
     x.hien();
     }
-    else{
-    System.out.println("không tìm thấy ở sách giải trí ");
-        }
 }
+    else{
+        }
 }
 }
 public void hienDS()
@@ -154,14 +155,12 @@ public void hienDS()
 for(sach x: s)
 {
 x.hien();
-
-
 }
 }
 public void SapXep()
 {
 Collections.sort(s, new sapxep());
-System.out.println("sach sau khi sap xep");
+System.out.println(" sach sau khi sap xep");
 hienDS();
 }
 public void menuChinh() {
@@ -172,9 +171,10 @@ public void menuChinh() {
     System.out.println("4. xuất sách giải trí");
     System.out.println("5. Sửa xóa sách");
     System.out.println("6. Tìm kiếm sách");
-    System.out.println("7. Xuất sách ra theo số lượng tăng dần");
+    System.out.println("7. Sắp xếp sách theo số lượng tăng dần");
     System.out.println("-----Nhấn phím 0 để thoát chương trình, xin cảm ơn!-----");
 }
 
 }
+
 
