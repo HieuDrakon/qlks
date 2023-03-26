@@ -88,7 +88,7 @@ break;
 } while (n != 0);
 }
 
-
+//compareTo(: so sách với
 public void suasachhoctap(String maSachht) {
 for (sach x : s) {
 if (x instanceof sachhoctap) {
