@@ -161,7 +161,7 @@ x.hien();
 public void SapXep()
 {
 Collections.sort(s, new sapxep());
-System.out.println("Danh sach trung tuyen sau khi sap xep");
+System.out.println("sach sau khi sap xep");
 hienDS();
 }
 public void menuChinh() {
