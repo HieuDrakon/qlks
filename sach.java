@@ -9,8 +9,6 @@ public class sach implements Serializable{
     String nhaXuatBan;
     double donGia;
     int soLuong;
-    
-    Scanner scanner = new Scanner(System.in);
      
     public sach() {
         super();
@@ -64,9 +62,9 @@ public class sach implements Serializable{
         this.soLuong = soLuong;
     }
     public void nhap() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập mã sách: ");
         maSach = scanner.nextLine();
-        
         System.out.println("Nhập tên sách: ");
         tensach = scanner.nextLine();
         System.out.println("Nhập tên nhà xuất bản: ");
