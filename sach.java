@@ -1,8 +1,6 @@
 package qlks;
-import java.io.Serializable;
 import java.util.Scanner;
-//implements Serializable: thực hiện tuần tự hóa
-public class sach implements Serializable{
+public class sach {
 
     String maSach;
     String tensach;
