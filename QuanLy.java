@@ -93,7 +93,6 @@ public void suasachhoctap(String maSachht) {
 for (sach x : s) {
 if (x instanceof sachhoctap) {
 if (((sachhoctap) x).getMaSach().compareTo(maSachht) == 0) {
-    x = new sachhoctap();
     x.nhap();
 }
 }
@@ -103,7 +102,6 @@ public void xoasachhoctap(String maSachht) {
 for (sach x : s) {
 if (x instanceof sachhoctap) {
 if (((sachhoctap) x).getMaSach().compareTo(maSachht) == 0) {
-   x = new sachhoctap();
    s.remove(x);
     
 }
@@ -114,7 +112,6 @@ public void suasachgiaitri(String maSachgt) {
 for (sach x : s) {
 if (x instanceof sachgiaitri) {
 if (((sachgiaitri) x).getMaSach().compareTo(maSachgt) == 0) {
-    x = new sachgiaitri();
     x.nhap();
 }
 }
@@ -124,7 +121,6 @@ public void xoasachgiaitri(String maSachgt) {
 for (sach x : s) {
 if (x instanceof sachgiaitri) {
 if (((sachgiaitri) x).getMaSach().compareTo(maSachgt) == 0) {
-    x = new sachgiaitri();
     s.remove(x);
 }
 }
