@@ -7,18 +7,21 @@ public class sach {
     String nhaXuatBan;
     double donGia;
     int soLuong;
-     
+    String ngaynhap;
+    String ngayxuat; 
     public sach() {
         super();
     }
  
-    public sach(String maSach,String tensach, String nhaXuatBan, double donGia, int soLuong ) {
+    public sach(String maSach,String tensach, String nhaXuatBan, double donGia, int soLuong,String ngaynhap,String ngayxuat ) {
         super();
         this.maSach = maSach;
         this.tensach=tensach;
         this.nhaXuatBan = nhaXuatBan;
         this.donGia = donGia;
         this.soLuong = soLuong;
+        this.ngaynhap = ngaynhap;
+        this.ngayxuat= ngayxuat;
         
     }
  
@@ -59,6 +62,20 @@ public class sach {
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }
+    public String getNgaynhap() {
+        return this.ngaynhap;
+    }
+ 
+    public void setNgaynhap(String ngaynhap) {
+        this.ngaynhap = ngaynhap;
+    }
+    public String getNgayxuat() {
+        return this.ngayxuat;
+    }
+ 
+    public void setNgayxuat(String ngayxuat) {
+        this.ngayxuat= ngayxuat;
+    }
     public void nhap() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập mã sách: ");
@@ -67,6 +84,10 @@ public class sach {
         tensach = scanner.nextLine();
         System.out.println("Nhập tên nhà xuất bản: ");
         nhaXuatBan = scanner.nextLine();
+        System.out.println("Nhập ngày nhập");
+        ngaynhap = scanner.nextLine();
+        System.out.println("Nhập ngày xuất");
+        ngayxuat = scanner.nextLine();     
         System.out.println("Nhập đơn giá: ");
         donGia = scanner.nextDouble();
         System.out.println("Nhập số lượng: ");
@@ -76,6 +97,6 @@ public class sach {
     
     public void hien()
 {
-System.out.print("{mã sách: "+ getMaSach() + ", tên sách: "+getTensach() +", nhà xb: "+ getNhaXuatBan()+ ", đơn giá: "+getDonGia() + "00"+"số lượng: "+getSoLuong()+"}");
+System.out.print("{mã sách: "+ getMaSach() + ", tên sách: "+getTensach() +", nhà xb: "+ getNhaXuatBan()+ ", đơn giá: "+getDonGia() + "00"+"số lượng: "+getSoLuong()+"ngày nhập"+getNgaynhap()+"ngày xuất"+getNgayxuat()+"}");
 }
 }
