@@ -123,21 +123,26 @@ public class sach {
          } 
         System.out.println("Nhập ngày nhập");
         ngn = scanner.nextInt();
-        while(tn%2==0){
-        if(ngn<=0 && ngn > 31){
+        
+        if(tn%2==0 && ngn<=0 && ngn > 31){
         do{
          System.out.println("nhập sai nhập lại");
          ngn = scanner.nextInt();
           }while(ngn>=1 && ngn <=31)
         }
-        }
-        while(tn%2!=0){
-        if(ngn<=0 && ngn > 30){
+        
+        
+        if(tn%2!=0 && ngn<=0 && ngn > 30){
         do{
          System.out.println("nhập sai nhập lại");
          ngn = scanner.nextInt();
           }while(ngn>=1 && ngn <=30)
         }
+        if(tn==2 && ngn<=0 && ngn > 28){
+        do{
+         System.out.println("nhập sai nhập lại");
+         ngn = scanner.nextInt();
+          }while(ngn>=1 && ngn <=28)
         }
         System.out.println("Nhập năm nhập");
         nn = scanner.nextInt();
@@ -157,21 +162,25 @@ public class sach {
          } 
         System.out.println("Nhập ngày xuất");
         ngx = scanner.nextInt();
-        while(tx%2==0){
-        if(ngx<=0 && ngx > 31){
+        if(tx%2==0 && ngx<=0 && ngx > 31){
         do{
          System.out.println("nhập sai nhập lại");
          ngx = scanner.nextInt();
-          }while(ngn>=1 && ngn <=31)
+          }while(ngx >=1 && ngx <=31)
         }
-        }
-        while(tn%2!=0){
-        if(ngn<=0 && ngn > 30){
+        
+        
+        if(tx%2!=0 && ngx<=0 && ngx > 30){
         do{
          System.out.println("nhập sai nhập lại");
          ngx = scanner.nextInt();
-          }while(ngx>=1 && ngx <=30)
+          }while(ngx >=1 && ngx <=30)
         }
+        if(tx==2 && ngc<=0 && ngx > 28){
+        do{
+         System.out.println("nhập sai nhập lại");
+         ngx = scanner.nextInt();
+          }while(ngx >=1 && ngx <=28)
         }
         System.out.println("Nhập năm xuất");
         nx = scanner.nextInt();
